@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papas_stock | 건강 자산 매니저</title>
     <style>
+        /* 기본 레이아웃 최적화 */
         body { font-family: 'Apple SD Gothic Neo', sans-serif; background-color: #121212; color: white; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; }
-        .profile { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 20px; }
+        .profile { width: 90px; height: 90px; border-radius: 50%; background-color: #FFD700; display: flex; align-items: center; justify-content: center; font-weight: bold; color: black; font-size: 24px; margin-bottom: 20px; border: 2px solid #FFD700; }
         h1 { font-size: 22px; margin-bottom: 5px; }
         p { font-size: 14px; color: #aaa; margin-bottom: 30px; text-align: center; }
         
+        /* 버튼 스타일 */
         .link-btn { width: 100%; max-width: 400px; background-color: #1f1f1f; color: white; padding: 18px; margin-bottom: 15px; text-decoration: none; border-radius: 12px; text-align: center; font-weight: bold; border: 1px solid #333; cursor: pointer; display: block; box-sizing: border-box; }
         .highlight { border: 1px solid #FFD700; background: linear-gradient(45deg, #1f1f1f, #2c2c2c); }
 
-        /* 추천 리스트 스타일 */
-        #product-list { display: block; width: 100%; max-width: 400px; margin-top: 10px; animation: fadeIn 0.4s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-
+        /* 추천 리스트 영역 */
+        #product-list { display: block; width: 100%; max-width: 400px; margin-top: 10px; }
         .product-card { background-color: #252525; border-radius: 12px; display: flex; align-items: center; padding: 12px; margin-bottom: 12px; border: 1px solid #444; text-decoration: none; color: white; transition: 0.2s; }
         .product-card:active { background-color: #333; }
         
         .num { font-size: 18px; font-weight: bold; color: #FFD700; margin-right: 15px; width: 25px; text-align: center; }
-        .img-box { width: 55px; height: 55px; background-color: #333; border-radius: 8px; margin-right: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .img-box { width: 55px; height: 55px; background-color: #333; border-radius: 8px; margin-right: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #777; }
         .img-box img { width: 100%; height: 100%; object-fit: cover; }
         
         .info { flex: 1; }
         .name { font-size: 15px; font-weight: bold; margin-bottom: 3px; }
         .desc { font-size: 12px; color: #999; line-height: 1.4; }
-
-        /* 방문자 카운터 스타일 */
-        .visitor-counter { margin-top: 40px; }
     </style>
 </head>
 <body>
-    <img src="https://papastockhub.com/favicon.ico" onerror="this.src='https://via.placeholder.com/100/FFD700/000000?text=Papas'" alt="Logo" class="profile">
+    <div class="profile">P</div>
     
     <h1>Papas_stock</h1>
     <p>당신의 건강 자산을 스마트하게 관리합니다</p>
@@ -47,7 +44,7 @@
         <a href="https://link.coupang.com/a/dsKgAG" class="product-card">
             <div class="num">01</div>
             <div class="img-box">
-                <img src="https://m.media-amazon.com/images/I/71Yy3t-vS2L._AC_SL1500_.jpg" alt="01">
+                <div style="text-align:center;">VITAMIN</div>
             </div>
             <div class="info">
                 <div class="name">닥터베스트 멀티 비타민 베지</div>
@@ -57,9 +54,7 @@
 
         <div class="product-card" style="opacity: 0.5;">
             <div class="num">02</div>
-            <div class="img-box">
-                <img src="https://via.placeholder.com/55/333/666?text=Next" alt="02">
-            </div>
+            <div class="img-box">Next</div>
             <div class="info">
                 <div class="name">다음 추천 제품 대기 중</div>
                 <div class="desc">새로운 건강 정보와 함께 업데이트됩니다</div>
@@ -70,11 +65,7 @@
 
     <a href="https://youtube.com/@Papas_stock" class="link-btn">📺 유튜브 채널 구독하고 꿀팁 받기</a>
     
-    <div class="visitor-counter">
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunoyooooo.github.io%2Flinks&count_bg=%23FFD700&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=VIEWS&edge_flat=false" alt="Visitor Count">
-    </div>
-
-    <div style="margin-top: 20px; font-size: 12px; color: #555;">© 2026 Papas_stock. All rights reserved.</div>
+    <div style="margin-top: 40px; font-size: 12px; color: #555;">© 2026 Papas_stock. All rights reserved.</div>
 
     <script>
         function toggleList() {
