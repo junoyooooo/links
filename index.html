@@ -9,20 +9,66 @@
         .profile { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 20px; }
         h1 { font-size: 22px; margin-bottom: 5px; }
         p { font-size: 14px; color: #aaa; margin-bottom: 30px; text-align: center; }
-        .link-btn { width: 100%; max-width: 400px; background-color: #1f1f1f; color: white; padding: 18px; margin-bottom: 15px; text-decoration: none; border-radius: 12px; text-align: center; font-weight: bold; border: 1px solid #333; transition: 0.3s; box-sizing: border-box; }
-        .link-btn:active { background-color: #333; transform: scale(0.98); }
+        
+        /* 기본 버튼 스타일 */
+        .link-btn { width: 100%; max-width: 400px; background-color: #1f1f1f; color: white; padding: 18px; margin-bottom: 15px; text-decoration: none; border-radius: 12px; text-align: center; font-weight: bold; border: 1px solid #333; cursor: pointer; display: block; box-sizing: border-box; }
         .highlight { border: 1px solid #FFD700; background: linear-gradient(45deg, #1f1f1f, #2c2c2c); }
+
+        /* 영양제 리스트 숨김 스타일 */
+        #product-list { display: none; width: 100%; max-width: 400px; margin-top: 10px; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .product-card { background-color: #252525; border-radius: 12px; display: flex; align-items: center; padding: 12px; margin-bottom: 10px; border: 1px solid #444; text-decoration: none; color: white; }
+        .num { font-size: 18px; font-weight: bold; color: #FFD700; margin-right: 15px; width: 25px; }
+        .img-box { width: 50px; height: 50px; background-color: #333; border-radius: 8px; margin-right: 15px; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .info { flex: 1; }
+        .name { font-size: 15px; font-weight: bold; }
+        .desc { font-size: 12px; color: #999; margin-top: 2px; }
     </style>
 </head>
 <body>
-    <img src="https://papastockhub.com/favicon.ico" alt="Logo" class="profile"> <h1>Papas_stock</h1>
+    <img src="https://papastockhub.com/favicon.ico" alt="Logo" class="profile">
+    <h1>Papas_stock</h1>
     <p>당신의 건강 자산을 스마트하게 관리합니다</p>
 
-    <a href="https://papastockhub.com/post-link" class="link-btn highlight">☕ 커피&영양제 '2-1 법칙' 상세글 보기</a>
-    <a href="https://papastockhub.com/products" class="link-btn">💊 파파 추천 가성비 영양제 리스트</a>
-    <a href="https://youtube.com/@Papas_stock" class="link-btn">📺 유튜브 풀영상 시청하기</a>
-    <a href="#" class="link-btn" style="color: #777;">🌟 네이버 프리미엄 콘텐츠 (준비중)</a>
+    <a href="https://papastockhub.com" class="link-btn highlight">🔍 파파스톡 건강 자산 리포트 (블로그)</a>
+
+    <div class="link-btn" onclick="toggleList()">💊 영상 속 영양제 번호로 찾기 (클릭)</div>
+
+    <div id="product-list">
+        <a href="https://papastockhub.com" class="product-card">
+            <div class="num">01</div>
+            <div class="img-box"><img src="https://via.placeholder.com/50" alt="p1"></div>
+            <div class="info">
+                <div class="name">흡수율 80% 지키는 멀티비타민</div>
+                <div class="desc">#2-1법칙준수 #가성비최고</div>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <div class="num">02</div>
+            <div class="img-box"><img src="https://via.placeholder.com/50" alt="p2"></div>
+            <div class="info">
+                <div class="name">준비 중인 추천 영양제</div>
+                <div class="desc">다음 영상에서 공개됩니다!</div>
+            </div>
+        </a>
+    </div>
+
+    <a href="https://youtube.com/@Papas_stock" class="link-btn">📺 유튜브 채널 구독하고 꿀팁 받기</a>
     
     <div style="margin-top: 30px; font-size: 12px; color: #555;">© 2026 Papas_stock. All rights reserved.</div>
+
+    <script>
+        function toggleList() {
+            var list = document.getElementById("product-list");
+            if (list.style.display === "block") {
+                list.style.display = "none";
+            } else {
+                list.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
+
