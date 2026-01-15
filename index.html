@@ -9,18 +9,28 @@
         .profile { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 20px; }
         h1 { font-size: 22px; margin-bottom: 5px; }
         p { font-size: 14px; color: #aaa; margin-bottom: 30px; text-align: center; }
+        
         .link-btn { width: 100%; max-width: 400px; background-color: #1f1f1f; color: white; padding: 18px; margin-bottom: 15px; text-decoration: none; border-radius: 12px; text-align: center; font-weight: bold; border: 1px solid #333; cursor: pointer; display: block; box-sizing: border-box; }
         .highlight { border: 1px solid #FFD700; background: linear-gradient(45deg, #1f1f1f, #2c2c2c); }
+
+        /* 추천 리스트 스타일 */
         #product-list { display: none; width: 100%; max-width: 400px; margin-top: 10px; animation: fadeIn 0.4s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
         .product-card { background-color: #252525; border-radius: 12px; display: flex; align-items: center; padding: 12px; margin-bottom: 12px; border: 1px solid #444; text-decoration: none; color: white; transition: 0.2s; }
         .product-card:active { background-color: #333; }
+        
         .num { font-size: 18px; font-weight: bold; color: #FFD700; margin-right: 15px; width: 25px; text-align: center; }
         .img-box { width: 55px; height: 55px; background-color: #333; border-radius: 8px; margin-right: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        
         .info { flex: 1; }
-        .name { font-size: 15px; font-weight: bold; margin-bottom: 30px; margin-bottom: 3px; }
+        .name { font-size: 15px; font-weight: bold; margin-bottom: 3px; }
         .desc { font-size: 12px; color: #999; line-height: 1.4; }
+
+        /* 방문자 카운터 스타일 */
+        .visitor-counter { margin-top: 40px; opacity: 0.6; transition: 0.3s; }
+        .visitor-counter:hover { opacity: 1; }
     </style>
 </head>
 <body>
@@ -33,7 +43,8 @@
     <div class="link-btn" onclick="toggleList()">💊 영상 속 영양제 번호로 찾기 (클릭)</div>
 
     <div id="product-list">
-        <a href="Https://link.coupang.com/a/dsKgAG" class="product-card">
+        
+        <a href="https://link.coupang.com/a/dsKgAG" class="product-card">
             <div class="num">01</div>
             <div class="img-box">
                 <img src="https://img1a.coupangcdn.com/image/vendor_inventory/images/2023/03/13/11/7/8e8e7a0a-1e4a-4b9e-9d8e-9c8e9c8e9c8e.jpg" onerror="this.src='https://via.placeholder.com/55?text=DR.BEST'" alt="01">
@@ -52,11 +63,16 @@
                 <div class="desc">새로운 건강 정보와 함께 업데이트됩니다</div>
             </div>
         </div>
+
     </div>
 
     <a href="https://youtube.com/@Papas_stock" class="link-btn">📺 유튜브 채널 구독하고 꿀팁 받기</a>
     
-    <div style="margin-top: 30px; font-size: 12px; color: #555;">© 2026 Papas_stock. All rights reserved.</div>
+    <div class="visitor-counter">
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjunoyooooo.github.io%2Flinks&count_bg=%23FFD700&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=VIEW&edge_flat=false" alt="Visitor Count">
+    </div>
+
+    <div style="margin-top: 20px; font-size: 12px; color: #555;">© 2026 Papas_stock. All rights reserved.</div>
 
     <script>
         function toggleList() {
